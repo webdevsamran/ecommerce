@@ -1,0 +1,129 @@
+/* Theme Variables */
+:root {
+    /* Dark theme (default) */
+    --bg-primary: #0f0a1e;
+    --bg-secondary: rgba(255, 255, 255, 0.05);
+    --bg-card: rgba(255, 255, 255, 0.05);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --text-muted: rgba(255, 255, 255, 0.5);
+    --accent-primary: #8b5cf6;
+    --accent-secondary: #ec4899;
+    --gradient-from: #1e1b4b;
+    --gradient-via: #581c87;
+    --gradient-to: #1e1b4b;
+}
+
+.light-theme {
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --bg-card: #ffffff;
+    --border-color: #e2e8f0;
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-muted: #94a3b8;
+    --accent-primary: #7c3aed;
+    --accent-secondary: #db2777;
+    --gradient-from: #f1f5f9;
+    --gradient-via: #ede9fe;
+    --gradient-to: #fce7f3;
+}
+
+/* Light theme specific overrides */
+.light-theme .min-h-screen {
+    background: linear-gradient(to bottom right, var(--gradient-from), var(--gradient-via), var(--gradient-to)) !important;
+}
+
+.light-theme .bg-white\/5 {
+    background-color: var(--bg-card) !important;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .border-white\/10 {
+    border-color: var(--border-color) !important;
+}
+
+.light-theme .text-white {
+    color: var(--text-primary) !important;
+}
+
+.light-theme .text-white\/70 {
+    color: var(--text-secondary) !important;
+}
+
+.light-theme .text-white\/50,
+.light-theme .text-white\/40,
+.light-theme .text-white\/30 {
+    color: var(--text-muted) !important;
+}
+
+.light-theme .placeholder-white\/40::placeholder {
+    color: var(--text-muted) !important;
+}
+
+.light-theme input,
+.light-theme textarea,
+.light-theme select {
+    background-color: #f1f5f9 !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-primary) !important;
+}
+
+.light-theme input::placeholder,
+.light-theme textarea::placeholder {
+    color: var(--text-muted) !important;
+}
+
+.light-theme .backdrop-blur-md {
+    backdrop-filter: blur(12px);
+}
+
+/* Navbar light theme */
+.light-theme nav {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+    border-color: var(--border-color) !important;
+}
+
+/* Button hover states for light theme */
+.light-theme .hover\:bg-white\/10:hover {
+    background-color: #e2e8f0 !important;
+}
+
+/* Skeleton loading states */
+.light-theme .animate-pulse {
+    background-color: #e2e8f0 !important;
+}
+
+/* Status badges */
+.light-theme .bg-purple-500\/20 {
+    background-color: #ede9fe !important;
+}
+
+.light-theme .bg-green-500\/20 {
+    background-color: #dcfce7 !important;
+}
+
+.light-theme .bg-yellow-500\/20 {
+    background-color: #fef3c7 !important;
+}
+
+.light-theme .bg-red-500\/20 {
+    background-color: #fee2e2 !important;
+}
+
+.light-theme .bg-blue-500\/20 {
+    background-color: #dbeafe !important;
+}
+
+/* Gradient text remains the same for brand consistency */
+.light-theme .bg-gradient-to-r.from-purple-400.to-pink-400 {
+    background: linear-gradient(to right, var(--accent-primary), var(--accent-secondary));
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/* Smooth theme transition */
+* {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.2s ease;
+}
